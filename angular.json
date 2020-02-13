@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mana"
+    }
+  },
+  "defaultProject": "mana",
+  "cli": {
+    "analytics": "6b22b084-ead6-446f-b37d-69068b104cd8"
+  }
 }
