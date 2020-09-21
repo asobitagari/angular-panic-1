@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Member } from '../models/member';
-import { MEMBERS } from '../models/members';
 import { ActivatedRoute } from '@angular/router';
+import { MemberService } from '../services/member.service';
 
 @Component({
   selector: 'app-mana-detail',
@@ -10,18 +10,21 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ManaDetailComponent implements OnInit {
 
-  members: Member[];
   member: Member;
   data: any;
 
   constructor(
     private route: ActivatedRoute,
+    private memberService: MemberService
   ) { }
 
   ngOnInit(): void {
-    let id = this.route.snapshot.paramMap.get('id');
     this.data = this.route.data;
-    this.members = MEMBERS;
-    this.member = this.members.find( (member: Member) => member.id = parseInt(id) );
+    this.getMember();
+  }
+
+  getMember(): void {
+    let id = parseInt(this.route.snapshot.paramMap.get('id'));
+    this.member = this.memberService.getMemberDetail(id);
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Member } from '../models/member';
-import { MEMBERS } from '../models/members';
+import { MemberService } from '../services/member.service';
 
 @Component({
   selector: 'app-mana',
@@ -11,9 +11,13 @@ export class ManaComponent implements OnInit {
 
   members: Member[];
 
-  constructor() { }
+  constructor(private memberService: MemberService) { }
 
   ngOnInit() {
-    this.members = MEMBERS;
+    this.getMembers();
+  }
+
+  getMembers(): void {
+    this.members = this.memberService.getMembers();
   }
 }
