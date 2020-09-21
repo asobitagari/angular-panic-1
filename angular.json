@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mana"
+    }
+  },
+  "defaultProject": "mana",
+  "cli": {
+    "analytics": false
+  }
 }
