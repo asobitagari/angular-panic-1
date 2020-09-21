@@ -1,1 +1,12 @@
-<p>mana works!</p>
+<div *ngFor="let member of members">
+  <div>
+    <label>Name:</label>{{member.name}}
+  </div>
+  <div>
+    <label>Age:</label>{{member.age}}
+  </div>
+  <div *ngIf="member">
+    <label>PR:</label>{{member.pr}}
+  </div>
+  <hr>
+</div>
