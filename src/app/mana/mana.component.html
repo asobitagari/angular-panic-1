@@ -1,12 +1,7 @@
 <div *ngFor="let member of members">
   <div>
-    <label>Name:</label>{{member.name}}
-  </div>
-  <div>
-    <label>Age:</label>{{member.age}}
-  </div>
-  <div *ngIf="member">
-    <label>PR:</label>{{member.pr}}
+    <label>Name:</label>
+    <a routerLink="mana-detail/{{member.id}}">{{member.name}}</a>
   </div>
   <hr>
 </div>

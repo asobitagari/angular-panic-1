@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ManaComponent } from './mana/mana.component';
 import { HeaderComponent } from './header/header.component';
+import { ManaDetailComponent } from './mana-detail/mana-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ManaComponent,
-    HeaderComponent
+    HeaderComponent,
+    ManaDetailComponent
   ],
   imports: [
     BrowserModule,

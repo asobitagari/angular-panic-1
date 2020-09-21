@@ -1,9 +1,4 @@
 <div>
   <app-header [title]="title"></app-header>
-  <app-mana></app-mana>
-  <label>タイトルを入力: </label><input
-    type="text"
-    [value]="title"
-    (input)="title = $event.target.value"
-  />
+  <router-outlet></router-outlet>
 </div>
